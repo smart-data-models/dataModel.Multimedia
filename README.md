@@ -1,2 +1,2 @@
 # dataModel.Multimedia
-Multimedia  data models repository 
+Currently the repository is under construction. 
