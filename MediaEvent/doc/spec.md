@@ -249,24 +249,24 @@ MediaEvent:
           type: object    
       title: 'GeoJSON Geometry'    
     mediaSource:    
-      creationTime: &mediaevent_-_properties_-_mediasource_-_parent_-_properties_-_creationtime    
-        description: 'Property. System date of creation of the Media Source'    
-        format: date-time    
-        type: string    
-      name: &mediaevent_-_properties_-_mediasource_-_parent_-_properties_-_name    
-        description: 'Property. The name of this item.'    
-        type: string    
-      parent: &mediaevent_-_properties_-_mediasource_-_parent_-_properties_-_parent    
-        description: 'Property. Model:''https://schema.org/URL''. Object´s technical information that raised the event'    
-        properties:    
-          creationTime: *mediaevent_-_properties_-_mediasource_-_parent_-_properties_-_creationtime    
-          name: *mediaevent_-_properties_-_mediasource_-_parent_-_properties_-_name    
-          parent: *mediaevent_-_properties_-_mediasource_-_parent_-_properties_-_parent    
-          sendTagsInEvents: &mediaevent_-_properties_-_mediasource_-_sendtagsinevents    
+      mediaSource:    
+        description: 'Property. Model:''https://schema.org/URL''. Technical information of the object that raised the event'    
+        properties: &mediaevent_-_properties_-_mediasource_-_mediasource_-_properties_-_parent_-_properties    
+          creationTime:    
+            description: 'Property. System date of creation of the Media Source'    
+            format: date-time    
+            type: string    
+          name:    
+            description: 'Property. The name of this item.'    
+            type: string    
+          parent:    
+            description: 'Property. Model:''https://schema.org/URL''. Technical information of the object that raised the event'    
+            properties: *mediaevent_-_properties_-_mediasource_-_mediasource_-_properties_-_parent_-_properties    
+            type: object    
+          sendTagsInEvents:    
             description: 'Property. Does the events rise for this media source attach the tag list associated to the MediaSource?'    
             type: boolean    
         type: object    
-      sendTagsInEvents: *mediaevent_-_properties_-_mediasource_-_sendtagsinevents    
     name:    
       description: 'The name of this item.'    
       type: Property    
