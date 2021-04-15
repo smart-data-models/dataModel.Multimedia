@@ -46,7 +46,7 @@
               "description": "Property. Identifier format of any NGSI entity"
             }
           ],
-          "description": "Property. Model:'https://schema.org/URL'. ...."
+          "description": "Relationship. Model:'https://schema.org/URL'. Link to the device providing the data source "
         },
         "observedEntities": {
           "type": "array",
