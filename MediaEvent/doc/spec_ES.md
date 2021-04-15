@@ -5,7 +5,7 @@ Entidad: MediaEvent
 
 ## Lista de propiedades  
 
-- `address`: La dirección postal  - `alternateName`: Un nombre alternativo para este artículo  - `areaServed`: La zona geográfica en la que se presta un servicio o se ofrece un artículo  - `data`: Cualquier objeto serializable que se adjunte al evento. Eg:número de placa + tipo de atributo  - `dataProvider`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada.  - `dateCreated`: Marca de tiempo de creación de la entidad. Suele ser asignada por la plataforma de almacenamiento.  - `dateModified`: Marca de tiempo de la última modificación de la entidad. Normalmente será asignada por la plataforma de almacenamiento.  - `description`: Una descripción de este artículo  - `deviceSource`: Enlace al dispositivo que proporciona la fuente de datos  - `eventType`: Tipo de evento que se ha producido. (es decir, PlateDetectionEvent, ColourDetectionEvent, etc.).  - `id`: Identificador único de la entidad  - `location`:   - `mediaSource`:   - `name`: El nombre de este artículo.  - `observedEntities`: Array de Entidades modelo creadas actualizadas o simplemente observadas por este evento.  - `owner`: Una lista que contiene una secuencia de caracteres codificada en JSON que hace referencia a los identificadores únicos de los propietarios  - `seeAlso`: lista de uri que apuntan a recursos adicionales sobre el artículo  - `source`: Una secuencia de caracteres que indica la fuente original de los datos de la entidad en forma de URL. Se recomienda que sea el nombre de dominio completo del proveedor de origen o la URL del objeto de origen.  - `type`: Tipo de entidad NGSI. Tiene que ser MediaEvent    
+- `address`: La dirección postal  - `alternateName`: Un nombre alternativo para este artículo  - `areaServed`: La zona geográfica en la que se presta un servicio o se ofrece un artículo  - `data`: Cualquier objeto serializable que se adjunte al evento. Eg:número de placa + tipo de atributo  - `dataProvider`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada.  - `dateCreated`: Marca de tiempo de creación de la entidad. Suele ser asignada por la plataforma de almacenamiento.  - `dateModified`: Marca de tiempo de la última modificación de la entidad. Normalmente será asignada por la plataforma de almacenamiento.  - `description`: Una descripción de este artículo  - `deviceSource`: Enlace al dispositivo que proporciona la fuente de datos  - `eventType`: Tipo de evento que se ha producido. (es decir, PlateDetectionEvent, ColourDetectionEvent, etc.).  - `id`: Identificador único de la entidad  - `location`:   - `mediaSource`:   - `name`: El nombre de este artículo.  - `observedEntities`: Array de Entidades modelo creadas actualizadas o simplemente observadas por este evento.  - `owner`: Una lista que contiene una secuencia de caracteres codificada en JSON que hace referencia a los identificadores únicos de los propietarios  - `seeAlso`: lista de uri que apuntan a recursos adicionales sobre el artículo  - `source`: Una secuencia de caracteres que indica la fuente original de los datos de la entidad en forma de URL. Se recomienda que sea el nombre de dominio completo del proveedor de origen, o la URL del objeto de origen.  - `type`: Tipo de entidad NGSI. Tiene que ser MediaEvent    
 Propiedades requeridas  
 - `dateCreated`  - `eventType`  - `id`  - `type`    
 El campo de datos está abierto para poder contener cualquier información detectada por los filtros personalizados. Por ejemplo, un filtro de matrículas de tráfico puede tener como datos sólo el número de matrícula, pero un filtro de vallas puede tener como datos la criticidad, las coordenadas reales de la infracción y la url de una foto tomada o incluso la imagen BASE64  
@@ -249,24 +249,24 @@ MediaEvent:
           type: object    
       title: 'GeoJSON Geometry'    
     mediaSource:    
-      creationTime: &mediaevent_-_properties_-_mediasource_-_parent_-_properties_-_creationtime    
-        description: 'Property. System date of creation of the Media Source'    
-        format: date-time    
-        type: string    
-      name: &mediaevent_-_properties_-_mediasource_-_parent_-_properties_-_name    
-        description: 'Property. The name of this item.'    
-        type: string    
-      parent: &mediaevent_-_properties_-_mediasource_-_parent_-_properties_-_parent    
-        description: 'Property. Model:''https://schema.org/URL''. Object´s technical information that raised the event'    
-        properties:    
-          creationTime: *mediaevent_-_properties_-_mediasource_-_parent_-_properties_-_creationtime    
-          name: *mediaevent_-_properties_-_mediasource_-_parent_-_properties_-_name    
-          parent: *mediaevent_-_properties_-_mediasource_-_parent_-_properties_-_parent    
-          sendTagsInEvents: &mediaevent_-_properties_-_mediasource_-_sendtagsinevents    
+      mediaSource:    
+        description: 'Property. Model:''https://schema.org/URL''. Technical information of the object that raised the event'    
+        properties: &mediaevent_-_properties_-_mediasource_-_mediasource_-_properties_-_parent_-_properties    
+          creationTime:    
+            description: 'Property. System date of creation of the Media Source'    
+            format: date-time    
+            type: string    
+          name:    
+            description: 'Property. The name of this item.'    
+            type: string    
+          parent:    
+            description: 'Property. Model:''https://schema.org/URL''. Technical information of the object that raised the event'    
+            properties: *mediaevent_-_properties_-_mediasource_-_mediasource_-_properties_-_parent_-_properties    
+            type: object    
+          sendTagsInEvents:    
             description: 'Property. Does the events rise for this media source attach the tag list associated to the MediaSource?'    
             type: boolean    
         type: object    
-      sendTagsInEvents: *mediaevent_-_properties_-_mediasource_-_sendtagsinevents    
     name:    
       description: 'The name of this item.'    
       type: Property    
