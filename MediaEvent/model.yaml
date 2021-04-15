@@ -235,7 +235,7 @@ MediaEvent:
       title: 'GeoJSON Geometry'
     mediaSource:
       mediaSource:
-        description: 'Property. Model:''https://schema.org/URL''. Technical information of the object that raised the event'
+        description: 'Property. Technical information of the object that raised the event. Model:''https://schema.org/URL''.'
         properties: &mediaevent_-_properties_-_mediasource_-_mediasource_-_properties_-_parent_-_properties
           creationTime:
             description: 'Property. System date of creation of the Media Source'
@@ -245,7 +245,7 @@ MediaEvent:
             description: 'Property. The name of this item.'
             type: string
           parent:
-            description: 'Property. Model:''https://schema.org/URL''. Technical information of the object that raised the event'
+            description: 'Property. Technical information of the object that raised the event. Model:''https://schema.org/URL''.'
             properties: *mediaevent_-_properties_-_mediasource_-_mediasource_-_properties_-_parent_-_properties
             type: object
           sendTagsInEvents:
