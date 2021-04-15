@@ -9,7 +9,7 @@
       "description": "Property. Model:'https://schema.org/URL'. Object´s technical information that raised the event",
       "properties": {
         "name": {
-          "$ref": "https://raw.githubusercontent.com/smart-data-models/data-models/master/common-schema.json#/definitions/GSAM-Commons/properties/name"
+          "$ref": "https://raw.githubusercontent.com/smart-data-models/data-models/master/common-schema.json#/definitions/GSMA-Commons/properties/name"
         },
         "creationTime": {
           "type": "string",
