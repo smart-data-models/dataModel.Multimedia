@@ -5,7 +5,7 @@ Entity: MediaEvent
 
 ## List of properties  
 
-- `address`: The mailing address  - `alternateName`: An alternative name for this item  - `areaServed`: The geographic area where a service or offered item is provided  - `data`: Any serializable object that is attached to the event. Eg:plate-number + Attribute type  - `dataProvider`: A sequence of characters identifying the provider of the harmonised data entity.  - `dateCreated`: Entity creation timestamp. This will usually be allocated by the storage platform.  - `dateModified`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.  - `description`: A description of this item  - `deviceSource`: ....  - `eventType`: Type of event that was raised. (ie: PlateDetectionEvent, ColourDetectionEvent, etc.  - `id`: Unique identifier of the entity  - `location`:   - `mediaSource`:   - `name`: The name of this item.  - `observedEntities`: Array of model Entities created updated or just observed by this event.  - `owner`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `seeAlso`: list of uri pointing to additional resources about the item  - `source`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.  - `type`: NGSI Entity type. It has to be MediaEvent    
+- `address`: The mailing address  - `alternateName`: An alternative name for this item  - `areaServed`: The geographic area where a service or offered item is provided  - `data`: Any serializable object that is attached to the event. Eg:plate-number + Attribute type  - `dataProvider`: A sequence of characters identifying the provider of the harmonised data entity.  - `dateCreated`: Entity creation timestamp. This will usually be allocated by the storage platform.  - `dateModified`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.  - `description`: A description of this item  - `deviceSource`: Link to the device providing the data source   - `eventType`: Type of event that was raised. (ie: PlateDetectionEvent, ColourDetectionEvent, etc.  - `id`: Unique identifier of the entity  - `location`:   - `mediaSource`:   - `name`: The name of this item.  - `observedEntities`: Array of model Entities created updated or just observed by this event.  - `owner`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `seeAlso`: list of uri pointing to additional resources about the item  - `source`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.  - `type`: NGSI Entity type. It has to be MediaEvent    
 Required properties  
 - `dateCreated`  - `eventType`  - `id`  - `type`    
 The data field is open in order to be able to contain any information detected by custom filters. For example a filter for trafic plates may just have as data the plate number but a fencing filter might have as data the criticality, the actual coordinates of the violation, and the url of a taken picture  or even the BASE64 image  
@@ -80,8 +80,8 @@ MediaEvent:
         - description: 'Property. Identifier format of any NGSI entity'    
           format: uri    
           type: string    
-      description: ....    
-      type: Property    
+      description: 'Link to the device providing the data source '    
+      type: Relationship    
       x-ngsi:    
         model: https://schema.org/URL    
     eventType:    
