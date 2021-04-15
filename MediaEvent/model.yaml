@@ -65,8 +65,8 @@ MediaEvent:
         - description: 'Property. Identifier format of any NGSI entity'
           format: uri
           type: string
-      description: ....
-      type: Property
+      description: 'Link to the device providing the data source '
+      type: Relationship
       x-ngsi:
         model: https://schema.org/URL
     eventType:
