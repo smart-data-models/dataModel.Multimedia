@@ -12,6 +12,9 @@
       "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons"
     },
     {
+      "$ref": "https://smart-data-models.github.io/dataModel.Multimedia/Multimedia-schema.json#/definitions"
+    },
+    {
       "properties": {
         "type": {
           "type": "string",
@@ -23,9 +26,6 @@
         "eventType": {
           "type": "string",
           "description": "Property. Model:'https://schema.org/Text'. Type of event that was raised. (ie: PlateDetectionEvent, ColourDetectionEvent, etc."
-        },
-        "mediaSource": {
-          "$ref": "https://smart-data-models.github.io/dataModel.Multimedia/Multimedia-schema.json#/definitions"
         },
         "data": {
           "type": "object",
