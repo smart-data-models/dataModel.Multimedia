@@ -25,7 +25,7 @@
           "description": "Property. Model:'https://schema.org/Text'. Type of event that was raised. (ie: PlateDetectionEvent, ColourDetectionEvent, etc."
         },
         "mediaSource": {
-          "$ref": "https://smart-data-models.github.io/dataModel.Multimedia/Multimedia-schema.json#/definitions/mediaSource/properties"
+          "$ref": "https://smart-data-models.github.io/dataModel.Multimedia/Multimedia-schema.json#/definitions"
         },
         "data": {
           "type": "object",
