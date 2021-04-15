@@ -21,7 +21,7 @@
           "description": "Property. Does the events rise for this media source attach the tag list associated to the MediaSource?"
         },
         "parent": {
-          "$ref": "#/definitions/MediaSource"
+          "$ref": "#/definitions/mediaSource"
         }
       }
     }
