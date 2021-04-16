@@ -12,7 +12,7 @@
       "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons"
     },
     {
-      "$ref": "https://smart-data-models.github.io/dataModel.Multimedia/Multimedia-schema.json#/definitions"
+      "$ref": "https://smart-data-models.github.io/dataModel.Multimedia/Multimedia-schema.json#/definitions/mediaCommons"
     },
     {
       "properties": {
