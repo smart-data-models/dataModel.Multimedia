@@ -1,6 +1,7 @@
 {
     "$schema": "http://json-schema.org/schema#",
-    "id": "https://fiware.github.io/dataModels/specs/Media/MediaEvent/schema.json",
+    "id": "https://smart-data-models.github.io/dataModel.Multimedia/MediaEvent/schema.json",
+    "$schemaVersion": "0.0.1",
     "title": "Smart Data Models - Media / Media Event",
     "description": "Base for all events raised by elements in the media server",
     "type": "object",
@@ -76,6 +77,5 @@
         "type",
         "eventType",
         "dateCreated"
-    ],
-    "$schemaVersion": "0.0.1"
+    ]
 }
