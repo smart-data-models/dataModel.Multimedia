@@ -1,23 +1,23 @@
 {
     "@context": {
-        "address": "https://smartdatamodels.org/dataModel.Multimedia/address",
-        "alternateName": "https://smartdatamodels.org/dataModel.Multimedia/alternateName",
-        "areaServed": "https://smartdatamodels.org/dataModel.Multimedia/areaServed",
+        "address": "https://smartdatamodels.org/address",
+        "alternateName": "https://smartdatamodels.org/alternateName",
+        "areaServed": "https://smartdatamodels.org/areaServed",
         "data": "ngsi-ld:data",
-        "dataProvider": "https://smartdatamodels.org/dataModel.Multimedia/dataProvider",
-        "dateCreated": "https://smartdatamodels.org/dataModel.Multimedia/dateCreated",
-        "dateModified": "https://smartdatamodels.org/dataModel.Multimedia/dateModified",
+        "dataProvider": "https://smartdatamodels.org/dataProvider",
+        "dateCreated": "https://smartdatamodels.org/dateCreated",
+        "dateModified": "https://smartdatamodels.org/dateModified",
         "description": "http://purl.org/dc/terms/description",
         "deviceSource": "https://smartdatamodels.org/dataModel.Multimedia/deviceSource",
         "eventType": "https://smartdatamodels.org/dataModel.Multimedia/eventType",
         "id": "@id",
         "location": "ngsi-ld:location",
         "mediaSource": "https://smartdatamodels.org/dataModel.Multimedia/mediaSource",
-        "name": "https://smartdatamodels.org/dataModel.Multimedia/name",
+        "name": "https://smartdatamodels.org/name",
         "observedEntities": "https://smartdatamodels.org/dataModel.Multimedia/observedEntities",
-        "owner": "https://smartdatamodels.org/dataModel.Multimedia/owner",
-        "seeAlso": "https://smartdatamodels.org/dataModel.Multimedia/seeAlso",
-        "source": "https://smartdatamodels.org/dataModel.Multimedia/source",
+        "owner": "https://smartdatamodels.org/owner",
+        "seeAlso": "https://smartdatamodels.org/seeAlso",
+        "source": "https://smartdatamodels.org/source",
         "type": "@type"
     }
 }
