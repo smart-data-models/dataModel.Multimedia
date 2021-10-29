@@ -38,36 +38,49 @@ MediaEvent:
         streetAddress:    
           description: 'Property. The street address. Model:''https://schema.org/streetAddress'''    
           type: string    
-      type: Property    
+      type: object    
       x-ngsi:    
         model: https://schema.org/address    
+        type: Property    
     alternateName:    
       description: 'An alternative name for this item'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     areaServed:    
       description: 'The geographic area where a service or offered item is provided'    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: https://schema.org/Text    
+        type: Property    
     data:    
       description: 'Any serializable object that is attached to the event. Eg:plate-number + Attribute type'    
-      type: Property    
+      type: object    
       x-ngsi:    
         model: http://schema.org/StructuredValue    
+        type: Property    
     dataProvider:    
       description: 'A sequence of characters identifying the provider of the harmonised data entity.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     dateCreated:    
       description: 'Entity creation timestamp. This will usually be allocated by the storage platform.'    
       format: date-time    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     dateModified:    
       description: 'Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.'    
       format: date-time    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     description:    
       description: 'A description of this item'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     deviceSource:    
       anyOf:    
         - description: 'Property. Identifier format of any NGSI entity'    
@@ -79,14 +92,15 @@ MediaEvent:
           format: uri    
           type: string    
       description: 'Link to the device providing the data source '    
-      type: Relationship    
       x-ngsi:    
         model: https://schema.org/URL    
+        type: Relationship    
     eventType:    
       description: 'Type of event that was raised. (ie: PlateDetectionEvent, ColourDetectionEvent, etc.'    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: https://schema.org/Text    
+        type: Property    
     id:    
       anyOf: &mediaevent_-_properties_-_owner_-_items_-_anyof    
         - description: 'Property. Identifier format of any NGSI entity'    
@@ -98,7 +112,8 @@ MediaEvent:
           format: uri    
           type: string    
       description: 'Unique identifier of the entity'    
-      type: Property    
+      x-ngsi:    
+        type: Property    
     location:    
       description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
       oneOf:    
@@ -250,7 +265,8 @@ MediaEvent:
             - coordinates    
           title: 'GeoJSON MultiPolygon'    
           type: object    
-      type: Geoproperty    
+      x-ngsi:    
+        type: Geoproperty    
     mediaSource:    
       description: 'Technical information of the object that raised the event'    
       properties: &mediaevent_-_properties_-_mediasource_-_properties_-_parent_-_properties    
@@ -268,12 +284,15 @@ MediaEvent:
         sendTagsInEvents:    
           description: 'Property. Does the events rise for this media source attach the tag list associated to the MediaSource?'    
           type: boolean    
-      type: Property    
+      type: object    
       x-ngsi:    
         model: https://schema.org/URL.    
+        type: Property    
     name:    
       description: 'The name of this item.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     observedEntities:    
       description: 'Array of model Entities created updated or just observed by this event.'    
       items:    
@@ -286,15 +305,18 @@ MediaEvent:
           - description: 'Property. Identifier format of any NGSI entity'    
             format: uri    
             type: string    
-      type: Property    
+      type: array    
       x-ngsi:    
         model: https://schema.org/StructuredValue    
+        type: Property    
     owner:    
       description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'    
       items:    
         anyOf: *mediaevent_-_properties_-_owner_-_items_-_anyof    
         description: 'Property. Unique identifier of the entity'    
-      type: Property    
+      type: array    
+      x-ngsi:    
+        type: Property    
     seeAlso:    
       description: 'list of uri pointing to additional resources about the item'    
       oneOf:    
@@ -305,15 +327,20 @@ MediaEvent:
           type: array    
         - format: uri    
           type: string    
-      type: Property    
+      x-ngsi:    
+        type: Property    
     source:    
       description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     type:    
       description: 'NGSI Entity type. It has to be MediaEvent'    
       enum:    
         - MediaEvent    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
   required:    
     - id    
     - type    
