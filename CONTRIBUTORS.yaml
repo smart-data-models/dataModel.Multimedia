@@ -1,9 +1,9 @@
 description: This is a compilation list of all CONTRIBUTORS across different objects (data models) alphabetically ordered. All fields are non mandatory
 contributors:
--
- name: Guiomar
- surname: Tuñón
- mail: fiware@naevatec.com
- organization: Naeva Tec
- project:  https://www.naevatec.com
- comments:
+- name: Guiomar
+  surname: "Tu\xF1\xF3n"
+  mail: fiware@naevatec.com
+  organization: Naeva Tec
+  project: https://www.naevatec.com
+  comments: 
+  year: 2022
