@@ -1,17 +1,32 @@
-Entità: MediaEvent  
-==================  
+<!-- 10-Header -->  
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+Entità: MediaEvent  
+==================<!-- /10-Header -->  
+<!-- 15-License -->  
 [Licenza aperta](https://github.com/smart-data-models//dataModel.Multimedia/blob/master/MediaEvent/LICENSE.md)  
 [documento generato automaticamente](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
-Descrizione globale: **Base per tutti gli eventi sollevati da elementi nel media server**  
+<!-- /15-License -->  
+<!-- 20-Description -->  
+Descrizione globale: **Base per tutti gli eventi generati dagli elementi del media server**  
+versione: 0.0.1  
+<!-- /20-Description -->  
+<!-- 30-PropertiesList -->  
 
 ## Elenco delle proprietà  
 
-- `address`: L'indirizzo postale  - `alternateName`: Un nome alternativo per questa voce  - `areaServed`: L'area geografica in cui viene fornito un servizio o un articolo offerto  - `data`: Qualsiasi oggetto serializzabile che è collegato all'evento. Es: plate-number + Tipo di attributo  - `dataProvider`: Una sequenza di caratteri che identifica il fornitore dell'entità di dati armonizzata.  - `dateCreated`: Timestamp di creazione dell'entità. Questo sarà di solito assegnato dalla piattaforma di archiviazione.  - `dateModified`: Timestamp dell'ultima modifica dell'entità. Questo sarà di solito assegnato dalla piattaforma di archiviazione.  - `description`: Una descrizione di questo articolo  - `deviceSource`: Collegamento al dispositivo che fornisce l'origine dei dati  - `eventType`: Tipo di evento che è stato sollevato. (cioè: PlateDetectionEvent, ColourDetectionEvent, ecc.  - `id`: Identificatore unico dell'entità  - `location`: Riferimento Geojson all'elemento. Può essere Point, LineString, Polygon, MultiPoint, MultiLineString o MultiPolygon  - `mediaSource`: Informazioni tecniche dell'oggetto che ha sollevato l'evento  - `name`: Il nome di questo articolo.  - `observedEntities`: Array di entità del modello create aggiornate o appena osservate da questo evento.  - `owner`: Una lista contenente una sequenza di caratteri codificata in JSON che si riferisce agli ID unici dei proprietari  - `seeAlso`: elenco di uri che puntano a risorse aggiuntive sull'elemento  - `source`: Una sequenza di caratteri che dà la fonte originale dei dati dell'entità come URL. Si raccomanda di essere il nome di dominio completamente qualificato del fornitore di origine, o l'URL dell'oggetto di origine.  - `type`: Tipo di entità NGSI. Deve essere MediaEvent    
+<sup><sub>[*] Se non c'è un tipo in un attributo è perché potrebbe avere diversi tipi o diversi formati/modelli</sub></sup>.  
+- `address[object]`: L'indirizzo postale  . Model: [https://schema.org/address](https://schema.org/address)- `alternateName[string]`: Un nome alternativo per questa voce  - `areaServed[string]`: L'area geografica in cui viene fornito il servizio o l'articolo offerto.  . Model: [https://schema.org/Text](https://schema.org/Text)- `data[object]`: Qualsiasi oggetto serializzabile collegato all'evento. Ad esempio: numero di targa + tipo di attributo  . Model: [http://schema.org/StructuredValue](http://schema.org/StructuredValue)- `dataProvider[string]`: Una sequenza di caratteri che identifica il fornitore dell'entità di dati armonizzata.  - `dateCreated[string]`: Timestamp di creazione dell'entità. Di solito viene assegnato dalla piattaforma di archiviazione.  - `dateModified[string]`: Timestamp dell'ultima modifica dell'entità. Di solito viene assegnato dalla piattaforma di archiviazione.  - `description[string]`: Descrizione dell'articolo  - `deviceSource[*]`: Collegamento al dispositivo che fornisce l'origine dei dati  . Model: [https://schema.org/URL](https://schema.org/URL)- `eventType[string]`: Tipo di evento generato. (ad esempio: PlateDetectionEvent, ColourDetectionEvent, ecc.  . Model: [https://schema.org/Text](https://schema.org/Text)- `id[*]`: Identificatore univoco dell'entità  - `location[*]`: Riferimento Geojson all'elemento. Può essere un punto, una stringa di linea, un poligono, un multi-punto, una stringa di linea o un poligono multiplo.  - `mediaSource[object]`: Informazioni tecniche dell'oggetto che ha generato l'evento  . Model: [https://schema.org/URL.](https://schema.org/URL.)- `name[string]`: Il nome di questo elemento.  - `observedEntities[array]`: Array di Entità del modello create aggiornate o appena osservate da questo evento.  . Model: [https://schema.org/StructuredValue](https://schema.org/StructuredValue)- `owner[array]`: Un elenco contenente una sequenza di caratteri codificata JSON che fa riferimento agli ID univoci dei proprietari.  - `seeAlso[*]`: elenco di uri che puntano a risorse aggiuntive sull'elemento  - `source[string]`: Una sequenza di caratteri che indica la fonte originale dei dati dell'entità come URL. Si consiglia di utilizzare il nome di dominio completamente qualificato del provider di origine o l'URL dell'oggetto di origine.  - `type[string]`: Tipo di entità NGSI. Deve essere MediaEvent  <!-- /30-PropertiesList -->  
+<!-- 35-RequiredProperties -->  
 Proprietà richieste  
-- `dateCreated`  - `eventType`  - `id`  - `type`    
-Il campo dati è aperto per poter contenere qualsiasi informazione rilevata dai filtri personalizzati. Per esempio un filtro per le targhe può avere come dati solo il numero di targa, ma un filtro per le recinzioni potrebbe avere come dati la criticità, le coordinate reali della violazione, e l'url di una foto scattata o anche l'immagine BASE64  
-## Descrizione del modello di dati delle proprietà  
+- `dateCreated`  - `eventType`  - `id`  - `type`  <!-- /35-RequiredProperties -->  
+<!-- 40-RequiredProperties -->  
+Il campo dati è aperto per poter contenere qualsiasi informazione rilevata dai filtri personalizzati. Ad esempio, un filtro per le targhe può avere come dati solo il numero di targa, mentre un filtro per le recinzioni può avere come dati la criticità, le coordinate effettive della violazione e l'url di una foto scattata o addirittura l'immagine BASE64.  
+<!-- /40-RequiredProperties -->  
+<!-- 50-DataModelHeader -->  
+## Modello di dati descrizione delle proprietà  
 Ordinati in ordine alfabetico (clicca per i dettagli)  
+<!-- /50-DataModelHeader -->  
+<!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 MediaEvent:    
@@ -347,11 +362,22 @@ MediaEvent:
     - eventType    
     - dateCreated    
   type: object    
+  x-derived-from: ""    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-license-url: https://github.com/smart-data-models/dataModel.Multimedia/blob/master/MediaEvent/LICENSE.md    
+  x-model-schema: ""    
+  x-model-tags: ""    
+  x-version: 0.0.1    
 ```  
 </details>    
-## Esempio di payloads  
-#### MediaEvent NGSI-v2 valori chiave Esempio  
-Ecco un esempio di un MediaEvent in formato JSON-LD come key-values. Questo è compatibile con NGSI-v2 quando si usa `options=keyValues` e restituisce i dati di contesto di una singola entità.  
+<!-- /60-ModelYaml -->  
+<!-- 70-MiddleNotes -->  
+<!-- /70-MiddleNotes -->  
+<!-- 80-Examples -->  
+## Esempi di payload  
+#### Valori chiave MediaEvent NGSI-v2 Esempio  
+Ecco un esempio di MediaEvent in formato JSON-LD come valori-chiave. Questo è compatibile con NGSI-v2 quando si usa `options=keyValues` e restituisce i dati di contesto di una singola entità.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "mediaEvent_1509702324600",  
@@ -370,8 +396,10 @@ MediaEvent:
   "dateCreated": "2017-11-03T10:45:23Z"  
 }  
 ```  
+</details>  
 #### MediaEvent NGSI-v2 normalizzato Esempio  
-Ecco un esempio di un MediaEvent in formato JSON-LD normalizzato. Questo è compatibile con NGSI-v2 quando non usa opzioni e restituisce i dati di contesto di una singola entità.  
+Ecco un esempio di MediaEvent in formato JSON-LD normalizzato. Questo è compatibile con NGSI-v2 quando non si utilizzano opzioni e restituisce i dati di contesto di una singola entità.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "mediaEvent_1509702324600",  
@@ -399,60 +427,74 @@ MediaEvent:
   }  
 }  
 ```  
-#### MediaEvent NGSI-LD valori-chiave Esempio  
-Ecco un esempio di un MediaEvent in formato JSON-LD come key-values. Questo è compatibile con NGSI-LD quando si usa `options=keyValues` e restituisce i dati di contesto di una singola entità.  
+</details>  
+#### Valori chiave MediaEvent NGSI-LD Esempio  
+Ecco un esempio di MediaEvent in formato JSON-LD come valori-chiave. Questo è compatibile con NGSI-LD quando si usa `options=keyValues` e restituisce i dati di contesto di una singola entità.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "id": "mediaEvent_1509702324600",  
-  "type": "MediaEvent",  
-  "eventType": "plate-detected",  
-  "mediaSource": {  
-    "name": "03ea110c-0ab2-4b19-8618-57f474721c86_kurento.MediaPipeline/28e4ae84-4e96-43bb-a812-538f7950b75f_platedetector.PlateDetectorFilter",  
-    "creationTime": "2017-11-03T10:45:19Z",  
-    "sendTagsInEvents": false,  
-    "parent": {  
-      "name": "03ea110c-0ab2-4b19-8618-57f474721c86_kurento.MediaPipeline",  
-      "creationTime": "2017-11-03T10:45:19Z",  
-      "sendTagsInEvents": false  
-    }  
-  },  
-  "dateCreated": "2017-11-03T10:45:23Z",  
-  "@context": ["https://smartdatamodels.org/context.jsonld"]  
-}  
-```  
-#### MediaEvent NGSI-LD normalizzato Esempio  
-Ecco un esempio di un MediaEvent in formato JSON-LD normalizzato. Questo è compatibile con NGSI-LD quando non usa opzioni e restituisce i dati di contesto di una singola entità.  
-```json  
-{  
-  "id": "mediaEvent_1509702324600",  
-  "type": "MediaEvent",  
-  "eventType": {  
-    "type": "Property",  
-    "value": "plate-detected"  
-  },  
-  "mediaSource": {  
-    "type": "Property",  
-    "value": {  
-      "name": "03ea110c-0ab2-4b19-8618-57f474721c86_kurento.MediaPipeline/28e4ae84-4e96-43bb-a812-538f7950b75f_platedetector.PlateDetectorFilter",  
-      "creationTime": "2017-11-03T10:45:19Z",  
-      "sendTagsInEvents": false,  
-      "parent": {  
-        "name": "03ea110c-0ab2-4b19-8618-57f474721c86_kurento.MediaPipeline",  
+    "id": "mediaEvent_1509702324600",  
+    "type": "MediaEvent",  
+    "dateCreated": "2017-11-03T10:45:23Z",  
+    "eventType": "plate-detected",  
+    "mediaSource": {  
+        "name": "03ea110c-0ab2-4b19-8618-57f474721c86_kurento.MediaPipeline/28e4ae84-4e96-43bb-a812-538f7950b75f_platedetector.PlateDetectorFilter",  
         "creationTime": "2017-11-03T10:45:19Z",  
-        "sendTagsInEvents": false  
-      }  
-    }  
-  },  
-  "dateCreated": {  
-    "type": "Property",  
-    "value": {  
-      "@type": "date-time",  
-      "@value": "2017-11-03T10:45:23Z"  
-    }  
-  },  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld"  
-  ]  
+        "sendTagsInEvents": false,  
+        "parent": {  
+            "name": "03ea110c-0ab2-4b19-8618-57f474721c86_kurento.MediaPipeline",  
+            "creationTime": "2017-11-03T10:45:19Z",  
+            "sendTagsInEvents": false  
+        }  
+    },  
+    "@context": [  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Multimedia/master/context.jsonld"  
+    ]  
 }  
 ```  
-Vedere [FAQ 10](https://smartdatamodels.org/index.php/faqs/) per avere una risposta su come trattare le unità di grandezza
+</details>  
+#### MediaEvent NGSI-LD normalizzato Esempio  
+Ecco un esempio di MediaEvent in formato JSON-LD normalizzato. Questo è compatibile con NGSI-LD quando non si utilizzano opzioni e restituisce i dati di contesto di una singola entità.  
+<details><summary><strong>show/hide example</strong></summary>    
+```json  
+{  
+    "id": "mediaEvent_1509702324600",  
+    "type": "MediaEvent",  
+    "dateCreated": {  
+        "type": "Property",  
+        "value": {  
+            "@type": "date-time",  
+            "@value": "2017-11-03T10:45:23Z"  
+        }  
+    },  
+    "eventType": {  
+        "type": "Property",  
+        "value": "plate-detected"  
+    },  
+    "mediaSource": {  
+        "type": "Property",  
+        "value": {  
+            "name": "03ea110c-0ab2-4b19-8618-57f474721c86_kurento.MediaPipeline/28e4ae84-4e96-43bb-a812-538f7950b75f_platedetector.PlateDetectorFilter",  
+            "creationTime": "2017-11-03T10:45:19Z",  
+            "sendTagsInEvents": false,  
+            "parent": {  
+                "name": "03ea110c-0ab2-4b19-8618-57f474721c86_kurento.MediaPipeline",  
+                "creationTime": "2017-11-03T10:45:19Z",  
+                "sendTagsInEvents": false  
+            }  
+        }  
+    },  
+    "@context": [  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Multimedia/master/context.jsonld"  
+    ]  
+}  
+```  
+</details><!-- /80-Examples -->  
+<!-- 90-FooterNotes -->  
+<!-- /90-FooterNotes -->  
+<!-- 95-Units -->  
+Vedere [FAQ 10](https://smartdatamodels.org/index.php/faqs/) per ottenere una risposta su come gestire le unità di grandezza.  
+<!-- /95-Units -->  
+<!-- 97-LastFooter -->  
+---  
+[Smart Data Models](https://smartdatamodels.org) +++ [Contribution Manual](https://bit.ly/contribution_manual) +++ [About](https://bit.ly/Introduction_SDM)<!-- /97-LastFooter -->  
