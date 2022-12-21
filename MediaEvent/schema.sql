@@ -1,0 +1,3 @@
+/* (Beta) Export of data model MediaEvent of the subject dataModel.Multimedia for a postgreSQL database. Pending translation of enumerations and multityped attributes */
+CREATE TYPE MediaEvent_type AS ENUM ('MediaEvent');
+CREATE TABLE MediaEvent (address json, alternateName text, areaServed text, data json, dataProvider text, dateCreated timestamp, dateModified timestamp, description text, deviceSource text, eventType text, id text, location json, mediaSource json, name text, observedEntities json, owner json, seeAlso json, source text, type MediaEvent_type);
