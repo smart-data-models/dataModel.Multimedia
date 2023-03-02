@@ -1,5 +1,6 @@
 {
     "@context": {
+        "MediaEvent": "https://smartdatamodels.org/dataModel.Multimedia/MediaEvent",
         "address": "https://smartdatamodels.org/address",
         "alternateName": "https://smartdatamodels.org/alternateName",
         "areaServed": "https://smartdatamodels.org/areaServed",
