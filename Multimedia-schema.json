@@ -9,7 +9,7 @@
       "properties": {
         "mediaSource": {
           "type": "object",
-          "description": "Property. Technical information of the object that raised the event. Model:'https://schema.org/URL'.",
+          "description": "Property. Technical information of the object that raised the event. Model:'https://schema.org/URL'",
           "properties": {
             "name": {
               "$ref": "https://raw.githubusercontent.com/smart-data-models/data-models/master/common-schema.json#/definitions/GSMA-Commons/properties/name"
