@@ -8,19 +8,29 @@
 <!-- /15-License -->  
 <!-- 20-Description -->  
 Globale Beschreibung: **Basis für alle Ereignisse, die von Elementen des Medienservers ausgelöst werden**  
-Version: 0.0.1  
+Version: 0.0.2  
 <!-- /20-Description -->  
 <!-- 30-PropertiesList -->  
 
 ## Liste der Eigenschaften  
 
-<sup><sub>[*] Wenn es für ein Attribut keinen Typ gibt, liegt das daran, dass es mehrere Typen oder unterschiedliche Formate/Muster haben kann</sub></sup>.  
-- `address[object]`: Die Postanschrift  . Model: [https://schema.org/address](https://schema.org/address)- `alternateName[string]`: Ein alternativer Name für diesen Artikel  - `areaServed[string]`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  . Model: [https://schema.org/Text](https://schema.org/Text)- `data[object]`: Jedes serialisierbare Objekt, das an das Ereignis angehängt ist. Beispiel: Plattennummer + Attribut Typ  . Model: [http://schema.org/StructuredValue](http://schema.org/StructuredValue)- `dataProvider[string]`: Eine Folge von Zeichen zur Identifizierung des Anbieters der harmonisierten Dateneinheit.  - `dateCreated[string]`: Zeitstempel der Entitätserstellung. Dieser wird in der Regel von der Speicherplattform zugewiesen.  - `dateModified[string]`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `description[string]`: Eine Beschreibung dieses Artikels  - `deviceSource[*]`: Link zu dem Gerät, das die Datenquelle bereitstellt  . Model: [https://schema.org/URL](https://schema.org/URL)- `eventType[string]`: Typ des Ereignisses, das ausgelöst wurde. (z. B. PlateDetectionEvent, ColourDetectionEvent, usw.)  . Model: [https://schema.org/Text](https://schema.org/Text)- `id[*]`: Eindeutiger Bezeichner der Entität  - `location[*]`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `mediaSource[object]`: Technische Informationen über das Objekt, das das Ereignis ausgelöst hat  . Model: [https://schema.org/URL.](https://schema.org/URL.)- `name[string]`: Der Name dieses Artikels.  - `observedEntities[array]`: Array der Modell-Entitäten, die durch dieses Ereignis aktualisiert oder gerade beobachtet wurden.  . Model: [https://schema.org/StructuredValue](https://schema.org/StructuredValue)- `owner[array]`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Kennungen der Eigentümer verweist  - `seeAlso[*]`: Liste von URLs, die auf zusätzliche Ressourcen zu dem Artikel verweisen  - `source[string]`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Es wird empfohlen, den voll qualifizierten Domänennamen des Quellanbieters oder die URL des Quellobjekts zu verwenden.  - `type[string]`: NGSI-Entitätstyp. Es muss MediaEvent sein  <!-- /30-PropertiesList -->  
+<sup><sub>[*] Wenn es für ein Attribut keinen Typ gibt, kann es mehrere Typen oder verschiedene Formate/Muster haben</sub></sup>.  
+- `address[object]`: Die Postanschrift  . Model: [https://schema.org/address](https://schema.org/address)	- `addressCountry[string]`: Das Land. Zum Beispiel, Spanien  . Model: [https://schema.org/addressCountry](https://schema.org/addressCountry)  
+	- `addressLocality[string]`: Die Ortschaft, in der sich die Adresse befindet, und die in der Region liegt  . Model: [https://schema.org/addressLocality](https://schema.org/addressLocality)  
+	- `addressRegion[string]`: Die Region, in der sich der Ort befindet, und die auf dem Land liegt  . Model: [https://schema.org/addressRegion](https://schema.org/addressRegion)  
+	- `district[string]`: Ein Bezirk ist eine Art von Verwaltungseinheit, die in einigen Ländern von der lokalen Regierung verwaltet wird.    
+	- `postOfficeBoxNumber[string]`: Die Postfachnummer für Postfachadressen. Zum Beispiel, 03578  . Model: [https://schema.org/postOfficeBoxNumber](https://schema.org/postOfficeBoxNumber)  
+	- `postalCode[string]`: Die Postleitzahl. Zum Beispiel, 24004  . Model: [https://schema.org/https://schema.org/postalCode](https://schema.org/https://schema.org/postalCode)  
+	- `streetAddress[string]`: Die Straßenanschrift  . Model: [https://schema.org/streetAddress](https://schema.org/streetAddress)  
+- `alternateName[string]`: Ein alternativer Name für diesen Artikel  - `areaServed[string]`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  . Model: [https://schema.org/Text](https://schema.org/Text)- `data[object]`: Jedes serialisierbare Objekt, das an das Ereignis angehängt ist. Beispiel: Plattennummer + Attribut Typ  . Model: [http://schema.org/StructuredValue](http://schema.org/StructuredValue)- `dataProvider[string]`: Eine Folge von Zeichen zur Identifizierung des Anbieters der harmonisierten Dateneinheit  - `dateCreated[date-time]`: Zeitstempel der Entitätserstellung. Dieser wird normalerweise von der Speicherplattform zugewiesen  - `dateModified[date-time]`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben  - `description[string]`: Eine Beschreibung dieses Artikels  - `deviceSource[*]`: Link zu dem Gerät, das die Datenquelle bereitstellt  . Model: [https://schema.org/URL](https://schema.org/URL)- `eventType[string]`: Typ des Ereignisses, das ausgelöst wurde. (z. B. PlateDetectionEvent, ColourDetectionEvent, etc.  . Model: [https://schema.org/Text](https://schema.org/Text)- `id[*]`: Eindeutiger Bezeichner der Entität  - `location[*]`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `mediaSource[object]`: Technische Informationen über das Objekt, das das Ereignis ausgelöst hat  . Model: [https://schema.org/URL](https://schema.org/URL)	- `creationTime[date-time]`: Systemdatum der Erstellung der Medienquelle    
+	- `name[string]`: Der Name dieses Artikels    
+	- `parent[object]`: Technische Informationen über das Objekt, das das Ereignis ausgelöst hat  . Model: [https://schema.org/URL](https://schema.org/URL)  
+- `name[string]`: Der Name dieses Artikels  - `observedEntities[array]`: Array der Modell-Entitäten, die durch dieses Ereignis aktualisiert oder gerade beobachtet wurden  . Model: [https://schema.org/StructuredValue](https://schema.org/StructuredValue)- `owner[array]`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Kennungen der Eigentümer verweist  - `seeAlso[*]`: Liste von URLs, die auf zusätzliche Ressourcen zu dem Artikel verweisen  - `source[string]`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Empfohlen wird der voll qualifizierte Domänenname des Quellanbieters oder die URL des Quellobjekts.  - `type[string]`: NGSI-Entitätstyp. Es muss MediaEvent sein  <!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
 Erforderliche Eigenschaften  
 - `dateCreated`  - `eventType`  - `id`  - `type`  <!-- /35-RequiredProperties -->  
 <!-- 40-RequiredProperties -->  
-Das Datenfeld ist offen, so dass es alle Informationen enthalten kann, die von benutzerdefinierten Filtern erkannt werden. Ein Filter für Verkehrsschilder kann beispielsweise nur das Kennzeichen als Daten enthalten, während ein Filter für Zäune als Daten die Kritikalität, die aktuellen Koordinaten der Verletzung und die URL eines aufgenommenen Bildes oder sogar das BASE64-Bild enthalten kann.  
+Das Datenfeld ist offen, so dass es alle Informationen enthalten kann, die von benutzerdefinierten Filtern erkannt werden. Zum Beispiel kann ein Filter für Verkehrsschilder nur das Kennzeichen als Daten haben, aber ein Filter für Zäune könnte als Daten die Kritikalität, die tatsächlichen Koordinaten der Verletzung und die URL eines aufgenommenen Bildes oder sogar das BASE64-Bild haben.  
 <!-- /40-RequiredProperties -->  
 <!-- 50-DataModelHeader -->  
 ## Datenmodell Beschreibung der Eigenschaften  
@@ -30,40 +40,68 @@
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 MediaEvent:    
-  description: 'Base for all events raised by elements in the media server'    
+  description: Base for all events raised by elements in the media server    
   properties:    
     address:    
-      description: 'The mailing address'    
+      description: The mailing address    
       properties:    
         addressCountry:    
-          description: 'Property. The country. For example, Spain. Model:''https://schema.org/addressCountry'''    
+          description: 'The country. For example, Spain'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/addressCountry    
+            type: Property    
         addressLocality:    
-          description: 'Property. The locality in which the street address is, and which is in the region. Model:''https://schema.org/addressLocality'''    
+          description: 'The locality in which the street address is, and which is in the region'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/addressLocality    
+            type: Property    
         addressRegion:    
-          description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/addressRegion'''    
+          description: 'The region in which the locality is, and which is in the country'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/addressRegion    
+            type: Property    
+        district:    
+          description: 'A district is a type of administrative division that, in some countries, is managed by the local government'    
+          type: string    
+          x-ngsi:    
+            type: Property    
         postOfficeBoxNumber:    
-          description: 'Property. The post office box number for PO box addresses. For example, 03578. Model:''https://schema.org/postOfficeBoxNumber'''    
+          description: 'The post office box number for PO box addresses. For example, 03578'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/postOfficeBoxNumber    
+            type: Property    
         postalCode:    
-          description: 'Property. The postal code. For example, 24004. Model:''https://schema.org/https://schema.org/postalCode'''    
+          description: 'The postal code. For example, 24004'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/https://schema.org/postalCode    
+            type: Property    
         streetAddress:    
-          description: 'Property. The street address. Model:''https://schema.org/streetAddress'''    
+          description: The street address    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/streetAddress    
+            type: Property    
+        streetNr:    
+          description: Number identifying a specific property on a public street    
+          type: string    
+          x-ngsi:    
+            type: Property    
       type: object    
       x-ngsi:    
         model: https://schema.org/address    
         type: Property    
     alternateName:    
-      description: 'An alternative name for this item'    
+      description: An alternative name for this item    
       type: string    
       x-ngsi:    
         type: Property    
     areaServed:    
-      description: 'The geographic area where a service or offered item is provided'    
+      description: The geographic area where a service or offered item is provided    
       type: string    
       x-ngsi:    
         model: https://schema.org/Text    
@@ -75,64 +113,72 @@ MediaEvent:
         model: http://schema.org/StructuredValue    
         type: Property    
     dataProvider:    
-      description: 'A sequence of characters identifying the provider of the harmonised data entity.'    
+      description: A sequence of characters identifying the provider of the harmonised data entity    
       type: string    
       x-ngsi:    
         type: Property    
     dateCreated:    
-      description: 'Entity creation timestamp. This will usually be allocated by the storage platform.'    
+      description: Entity creation timestamp. This will usually be allocated by the storage platform    
       format: date-time    
       type: string    
       x-ngsi:    
         type: Property    
     dateModified:    
-      description: 'Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.'    
+      description: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform    
       format: date-time    
       type: string    
       x-ngsi:    
         type: Property    
     description:    
-      description: 'A description of this item'    
+      description: A description of this item    
       type: string    
       x-ngsi:    
         type: Property    
     deviceSource:    
       anyOf:    
-        - description: 'Property. Identifier format of any NGSI entity'    
+        - description: Identifier format of any NGSI entity    
           maxLength: 256    
           minLength: 1    
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
           type: string    
-        - description: 'Property. Identifier format of any NGSI entity'    
+          x-ngsi:    
+            type: Property    
+        - description: Identifier format of any NGSI entity    
           format: uri    
           type: string    
+          x-ngsi:    
+            type: Property    
       description: 'Link to the device providing the data source '    
       x-ngsi:    
         model: https://schema.org/URL    
         type: Relationship    
     eventType:    
-      description: 'Type of event that was raised. (ie: PlateDetectionEvent, ColourDetectionEvent, etc.'    
+      description: 'Type of event that was raised. (ie: PlateDetectionEvent, ColourDetectionEvent, etc'    
       type: string    
       x-ngsi:    
         model: https://schema.org/Text    
         type: Property    
     id:    
-      anyOf: &mediaevent_-_properties_-_owner_-_items_-_anyof    
-        - description: 'Property. Identifier format of any NGSI entity'    
+      anyOf:    
+        - description: Identifier format of any NGSI entity    
           maxLength: 256    
           minLength: 1    
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
           type: string    
-        - description: 'Property. Identifier format of any NGSI entity'    
+          x-ngsi:    
+            type: Property    
+        - description: Identifier format of any NGSI entity    
           format: uri    
           type: string    
-      description: 'Unique identifier of the entity'    
+          x-ngsi:    
+            type: Property    
+      description: Unique identifier of the entity    
       x-ngsi:    
         type: Property    
     location:    
       description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
       oneOf:    
-        - description: 'GeoProperty. Geojson reference to the item. Point'    
+        - description: Geojson reference to the item. Point    
           properties:    
             bbox:    
               items:    
@@ -151,9 +197,11 @@ MediaEvent:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON Point'    
+          title: GeoJSON Point    
           type: object    
-        - description: 'GeoProperty. Geojson reference to the item. LineString'    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. LineString    
           properties:    
             bbox:    
               items:    
@@ -175,9 +223,11 @@ MediaEvent:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON LineString'    
+          title: GeoJSON LineString    
           type: object    
-        - description: 'GeoProperty. Geojson reference to the item. Polygon'    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. Polygon    
           properties:    
             bbox:    
               items:    
@@ -201,9 +251,11 @@ MediaEvent:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON Polygon'    
+          title: GeoJSON Polygon    
           type: object    
-        - description: 'GeoProperty. Geojson reference to the item. MultiPoint'    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. MultiPoint    
           properties:    
             bbox:    
               items:    
@@ -224,9 +276,11 @@ MediaEvent:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON MultiPoint'    
+          title: GeoJSON MultiPoint    
           type: object    
-        - description: 'GeoProperty. Geojson reference to the item. MultiLineString'    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. MultiLineString    
           properties:    
             bbox:    
               items:    
@@ -250,9 +304,11 @@ MediaEvent:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON MultiLineString'    
+          title: GeoJSON MultiLineString    
           type: object    
-        - description: 'GeoProperty. Geojson reference to the item. MultiLineString'    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. MultiLineString    
           properties:    
             bbox:    
               items:    
@@ -278,62 +334,164 @@ MediaEvent:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON MultiPolygon'    
+          title: GeoJSON MultiPolygon    
           type: object    
+          x-ngsi:    
+            type: GeoProperty    
       x-ngsi:    
         type: GeoProperty    
     mediaSource:    
-      description: 'Technical information of the object that raised the event'    
-      properties: &mediaevent_-_properties_-_mediasource_-_properties_-_parent_-_properties    
+      description: Technical information of the object that raised the event    
+      properties:    
         creationTime:    
-          description: 'Property. System date of creation of the Media Source'    
+          description: System date of creation of the Media Source    
           format: date-time    
           type: string    
+          x-ngsi:    
+            type: Property    
         name:    
-          description: 'Property. The name of this item.'    
+          description: The name of this item    
           type: string    
+          x-ngsi:    
+            type: Property    
         parent:    
-          description: 'Property. Technical information of the object that raised the event. Model:''https://schema.org/URL''.'    
-          properties: *mediaevent_-_properties_-_mediasource_-_properties_-_parent_-_properties    
+          description: Technical information of the object that raised the event    
+          properties:    
+            creationTime:    
+              description: System date of creation of the Media Source    
+              format: date-time    
+              type: string    
+              x-ngsi:    
+                type: Property    
+            name:    
+              description: The name of this item    
+              type: string    
+              x-ngsi:    
+                type: Property    
+            parent:    
+              description: Technical information of the object that raised the event    
+              properties:    
+                creationTime:    
+                  description: System date of creation of the Media Source    
+                  format: date-time    
+                  type: string    
+                  x-ngsi:    
+                    type: Property    
+                name:    
+                  description: The name of this item    
+                  type: string    
+                  x-ngsi:    
+                    type: Property    
+                parent:    
+                  description: Technical information of the object that raised the event    
+                  properties:    
+                    creationTime:    
+                      description: System date of creation of the Media Source    
+                      format: date-time    
+                      type: string    
+                      x-ngsi:    
+                        type: Property    
+                    name:    
+                      description: The name of this item    
+                      type: string    
+                      x-ngsi:    
+                        type: Property    
+                    parent:    
+                      description: Technical information of the object that raised the event    
+                      properties:    
+                        creationTime:    
+                        name:    
+                        parent:    
+                        sendTagsInEvents:    
+                      type: object    
+                      x-ngsi:    
+                        model: https://schema.org/URL    
+                        type: Property    
+                    sendTagsInEvents:    
+                      description: Wether the events rise for this media source attach the tag list associated to the MediaSource    
+                      type: boolean    
+                      x-ngsi:    
+                        type: Property    
+                  type: object    
+                  x-ngsi:    
+                    model: https://schema.org/URL    
+                    type: Property    
+                sendTagsInEvents:    
+                  description: Wether the events rise for this media source attach the tag list associated to the MediaSource    
+                  type: boolean    
+                  x-ngsi:    
+                    type: Property    
+              type: object    
+              x-ngsi:    
+                model: https://schema.org/URL    
+                type: Property    
+            sendTagsInEvents:    
+              description: Wether the events rise for this media source attach the tag list associated to the MediaSource    
+              type: boolean    
+              x-ngsi:    
+                type: Property    
           type: object    
+          x-ngsi:    
+            model: https://schema.org/URL    
+            type: Property    
         sendTagsInEvents:    
-          description: 'Property. Does the events rise for this media source attach the tag list associated to the MediaSource?'    
+          description: Wether the events rise for this media source attach the tag list associated to the MediaSource    
           type: boolean    
+          x-ngsi:    
+            type: Property    
       type: object    
       x-ngsi:    
-        model: https://schema.org/URL.    
+        model: https://schema.org/URL    
         type: Property    
     name:    
-      description: 'The name of this item.'    
+      description: The name of this item    
       type: string    
       x-ngsi:    
         type: Property    
     observedEntities:    
-      description: 'Array of model Entities created updated or just observed by this event.'    
+      description: Array of model Entities created updated or just observed by this event    
       items:    
         anyOf:    
-          - description: 'Property. Identifier format of any NGSI entity'    
+          - description: Identifier format of any NGSI entity    
             maxLength: 256    
             minLength: 1    
             pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
             type: string    
-          - description: 'Property. Identifier format of any NGSI entity'    
+            x-ngsi:    
+              type: Property    
+          - description: Identifier format of any NGSI entity    
             format: uri    
             type: string    
+            x-ngsi:    
+              type: Property    
       type: array    
       x-ngsi:    
         model: https://schema.org/StructuredValue    
         type: Property    
     owner:    
-      description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'    
+      description: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)    
       items:    
-        anyOf: *mediaevent_-_properties_-_owner_-_items_-_anyof    
-        description: 'Property. Unique identifier of the entity'    
+        anyOf:    
+          - description: Identifier format of any NGSI entity    
+            maxLength: 256    
+            minLength: 1    
+            pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+            type: string    
+            x-ngsi:    
+              type: Property    
+          - description: Identifier format of any NGSI entity    
+            format: uri    
+            type: string    
+            x-ngsi:    
+              type: Property    
+        description: Unique identifier of the entity    
+        x-ngsi:    
+          type: Property    
       type: array    
       x-ngsi:    
         type: Property    
     seeAlso:    
-      description: 'list of uri pointing to additional resources about the item'    
+      description: list of uri pointing to additional resources about the item    
       oneOf:    
         - items:    
             format: uri    
@@ -345,12 +503,12 @@ MediaEvent:
       x-ngsi:    
         type: Property    
     source:    
-      description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'    
+      description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object'    
       type: string    
       x-ngsi:    
         type: Property    
     type:    
-      description: 'NGSI Entity type. It has to be MediaEvent'    
+      description: NGSI Entity type. It has to be MediaEvent    
       enum:    
         - MediaEvent    
       type: string    
@@ -363,11 +521,11 @@ MediaEvent:
     - dateCreated    
   type: object    
   x-derived-from: ""    
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'    
   x-license-url: https://github.com/smart-data-models/dataModel.Multimedia/blob/master/MediaEvent/LICENSE.md    
   x-model-schema: ""    
   x-model-tags: ""    
-  x-version: 0.0.1    
+  x-version: 0.0.2    
 ```  
 </details>    
 <!-- /60-ModelYaml -->  
@@ -376,7 +534,7 @@ MediaEvent:
 <!-- 80-Examples -->  
 ## Beispiel-Nutzlasten  
 #### MediaEvent NGSI-v2 key-values Beispiel  
-Hier ist ein Beispiel für ein MediaEvent im JSON-LD-Format als Key-Values. Dies ist mit NGSI-v2 kompatibel, wenn `options=keyValues` verwendet wird und liefert die Kontextdaten einer einzelnen Entität.  
+Hier ist ein Beispiel für ein MediaEvent im JSON-LD-Format als Schlüsselwerte. Dies ist mit NGSI-v2 kompatibel, wenn `options=keyValues` verwendet wird und liefert die Kontextdaten einer einzelnen Entität.  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
