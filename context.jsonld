@@ -7,6 +7,14 @@
         "addressRegion": "https://smartdatamodels.org/addressRegion",
         "alternateName": "https://smartdatamodels.org/alternateName",
         "areaServed": "https://smartdatamodels.org/areaServed",
+        "bbox": {
+            "@container": "@list",
+            "@id": "geojson:bbox"
+        },
+        "coordinates": {
+            "@container": "@list",
+            "@id": "geojson:coordinates"
+        },
         "creationTime": "https://smartdatamodels.org/dataModel.Multimedia/creationTime",
         "data": "ngsi-ld:data",
         "dataProvider": "https://smartdatamodels.org/dataProvider",
