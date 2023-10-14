@@ -1,6 +1,6 @@
 {
     "$schema": "http://json-schema.org/schema#",
-    "id": "https://smart-data-models.github.io/dataModel.Multimedia/MediaEvent/schema.json",
+    "$id": "https://smart-data-models.github.io/dataModel.Multimedia/MediaEvent/schema.json",
     "$schemaVersion": "0.0.2",
     "modelTags": "",
     "title": "Smart Data Models - Media / Media Event",
