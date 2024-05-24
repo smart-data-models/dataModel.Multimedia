@@ -24,19 +24,24 @@
 #         curl -X GET http://localhost:1026/ngsi-ld/v1/entities?local=true&limit=1000
 #         
 #         # now the python code you can use to insert some value in the context broker according to the data model
+#         # Version Warning! 
+#         # This code is designed to work with the version 0.8 of pysmartdatamodels or later
+#         # to work with earlier version you need to replace the import instruction for
+#         # from pysmartdatamodels import pysmartdatamodels as sdm
 #         
-from pysmartdatamodels import pysmartdatamodels as sdm
+#         
+import pysmartdatamodels as sdm
 import subprocess
 serverUrl = "http://localhost:1026" # supposed that your broker is installed in localhost. Edit to match your configuration
 dataModel = "MediaEvent"
 subject = "dataModel.Multimedia"
-eventType = "{'type': 'Property', 'value': 'plate-detected'}"
+eventType = "plate-detected"
 attribute = "eventType"
 value = eventType
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
 print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
 
-mediaSource = {'type': 'Property', 'value': {'name': '03ea110c-0ab2-4b19-8618-57f474721c86_kurento.MediaPipeline/28e4ae84-4e96-43bb-a812-538f7950b75f_platedetector.PlateDetectorFilter', 'creationTime': '2017-11-03T10:45:19Z', 'sendTagsInEvents': False, 'parent': {'name': '03ea110c-0ab2-4b19-8618-57f474721c86_kurento.MediaPipeline', 'creationTime': '2017-11-03T10:45:19Z', 'sendTagsInEvents': False}}}
+mediaSource = {'name': '03ea110c-0ab2-4b19-8618-57f474721c86_kurento.MediaPipeline/28e4ae84-4e96-43bb-a812-538f7950b75f_platedetector.PlateDetectorFilter', 'creationTime': '2017-11-03T10:45:19Z', 'sendTagsInEvents': False, 'parent': {'name': '03ea110c-0ab2-4b19-8618-57f474721c86_kurento.MediaPipeline', 'creationTime': '2017-11-03T10:45:19Z', 'sendTagsInEvents': False}}
 attribute = "mediaSource"
 value = mediaSource
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
